@@ -1,0 +1,23 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+
+provisioner:
+  name: chef_zero
+  product_name: chef
+  product_version: 15
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-18.04
+  - name: centos-6
+
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
