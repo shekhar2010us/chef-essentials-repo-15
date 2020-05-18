@@ -11,7 +11,7 @@ Use Ohai
 ```
 - Run ohai and check the output
 - Run ohai by passing attributes to select columns
-e.g. ohai memory, ohai cpu, ohai cloud.public_ipv4
+e.g. ohai memory, ohai cpu, ohai cloud/public_ipv4
 
 ```
 
