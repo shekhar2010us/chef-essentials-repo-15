@@ -14,11 +14,7 @@ Generate the `workstation` cookbook
 - create a recipe "setup" (using chef generate)
    - file '/etc/motd' with some content
    - package 'tree'
-- in cookbooks/workstation/recipes/default.rb
-   - include_recipe 'workstation::setup'
-- run the cookbook using setup full path
-- run the cookbook using runlist
-- run the cookbook just by giving cookbook name
+- run the cookbook using setup.rb full path
 ```
 
 
@@ -34,11 +30,7 @@ Generate the `apache` cookbook
    - file '/var/www/html/index.html' with some content
    - package 'httpd'
    - service 'httpd'
-- in cookbooks/apache/recipes/default.rb
-   - include_recipe 'apache::server'
-- run the cookbook using server full path
-- run the cookbook using runlist
-- run the cookbook just by giving cookbook name
+- run the cookbook using server.rb full path
 ```
 
 
