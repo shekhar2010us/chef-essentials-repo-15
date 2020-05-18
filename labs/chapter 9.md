@@ -1,6 +1,6 @@
 # Lab: Chapter 9
 
-> Total Time: 30 minutes
+> Total Time: 45 minutes
 
 `working directory - /home/centos/code`
 
