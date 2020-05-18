@@ -42,9 +42,11 @@ Using run_list for "apache::server", "workstation::setup" together
 Using a cookbook as a dependent of another cookbook
 
 ```
-- in default recipe of apache cookbook, include workstation::setup recipe
+- in default recipe of apache cookbook,
+      include_recipe 'workstation::setup'
 - run the cookbook apache
 - observe missing_cookbook error
-- Add workstation dependency in metadata.rb of the apache cookbook
+- Add workstation dependency in apache metadata.rb of the apache cookbook
+      depends 'workstation'
 - Run and test apache cookbook
 ```
