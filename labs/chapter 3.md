@@ -1,45 +1,69 @@
-# Lab: Chapter 2
+# Lab: Chapter 3
 
-> Total Time: 30 minutes
+> Total Time: 60 minutes
+
+`working directory - /home/centos/code`
 
 ## Part 1
 
+Generate the `workstation` cookbook
+
 ```
-- Login to the AWS machine (Get the IP address from the instructor)
-	Username: centos
-	Password: aws.pem for mac
-				aws.ppk for windows
-- Create a directory `/home/centos/code` where all recipes will be stored
+- create a cookbook "workstation"
+- check all directories and files to understand cookbook structure
+- create a recipe "setup" (using chef generate)
+   - file '/etc/motd' with some content
+   - package 'tree'
+- in cookbooks/workstation/recipes/default.rb
+   - include_recipe 'workstation::setup'
+- run the cookbook using setup full path
+- run the cookbook using runlist
+- run the cookbook just by giving cookbook name
 ```
 
 
 
 ## Part 2
-`Working directory - /home/centos/code`
+
+Generate the `apache` cookbook
 
 ```
-- Create a recipe "hello.rb"
-	- to create a file "/home/centos/hello.txt"
-	- with content "blah blah blah"
-- Use chef-client to apply the recipe
-- Test if file is created with the mentioned content
-- Manually change the file content
-- Use chef-client to apply the recipe again
-- Test if file content is back to desired
+- create a cookbook "apache"
+- check all directories and files to understand cookbook structure
+- create a recipe "server" (using chef generate)
+   - file '/var/www/html/index.html' with some content
+   - package 'httpd'
+   - service 'httpd'
+- in cookbooks/apache/recipes/default.rb
+   - include_recipe 'apache::server'
+- run the cookbook using server full path
+- run the cookbook using runlist
+- run the cookbook just by giving cookbook name
 ```
-<br>
+
+
+Reference server file:
+
+```
+package 'httpd'
+
+file '/var/www/html/index.html' do
+  content '<h1>Hello, world!</h1>'
+end
+
+service 'httpd' do
+  action [:enable, :start]
+end
+```
+
 
 ## Part 3
 
-`Working directory - /home/centos/code`
+- Run `cookstyle` and check offenses
+- Try to fix few offence
 
-```
-- Create a recipe "setup.rb"
-	- to create a file "/etc/motd"
-		- with content "blah blah blah”
-	- to install package “tree”
-- Use chef-client to apply the recipe
-- Test if file is created with the mentioned content
-- Test if package “tree” is installed
-```
 
+## Part 4
+
+- Run `foodcritic`
+- Check offences
