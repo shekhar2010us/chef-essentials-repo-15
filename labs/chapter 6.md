@@ -1,4 +1,4 @@
-# Lab: Chapter 4
+# Lab: Chapter 6
 
 > Total Time: 60 minutes
 
@@ -6,45 +6,45 @@
 
 ## Part 1
 
-Using run_list for "workstation" cookbook
+Use Ohai
 
 ```
-- run the cookbook using setup.rb full path
-- run the cookbook using runlist [workstation::setup]
-- in cookbooks/workstation/recipes/default.rb
-   - include_recipe 'workstation::setup'
-- run the cookbook just by giving cookbook name [workstation]
-* check stdout logs after each step
-```
+- Run ohai and check the output
+- Run ohai by passing attributes to select columns
+e.g. ohai memory, ohai cpu, ohai cloud.public_ipv4
 
+```
 
 
 ## Part 2
 
-Using run_list for "apache" cookbook
+Change workstation::setup recipe
 
 ```
-- repeat same steps as above for "apache" cookbook
+- Add ipaddress, hostmame, cpu, memory in the "/etc/motd" file
+	- copy the above parameters from ohai
+- run runlist to apply changes
 ```
 
 
 ## Part 3
 
-Using run_list for "apache::server", "workstation::setup" together
+Change workstation::setup recipe
 
 ```
-- run two runlist in an array
+- Add ipaddress, hostmame, cpu, memory in the "/etc/motd" file
+	- Use node object through string interpolation 
+- run runlist to apply changes
 ```
 
 
 ## Part 4
 
-Using a cookbook as a dependent of another cookbook
+Change apache::server recipe
 
 ```
-- in default recipe of apache cookbook, include workstation::setup recipe
-- run the cookbook apache
-- observe missing_cookbook error
-- Add workstation dependency in metadata.rb of the apache cookbook
-- Run and test apache cookbook
+- Add ipaddress, hostmame, cpu, memory in the "index.html" file
+	- Use node object through string interpolation 
+- run runlist to apply changes
+- test web server in browser
 ```
