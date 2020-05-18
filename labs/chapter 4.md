@@ -49,4 +49,5 @@ Using a cookbook as a dependent of another cookbook
 - Add workstation dependency in apache metadata.rb of the apache cookbook
       depends 'workstation'
 - Run and test apache cookbook
+      sudo chef-client -z -r "recipe[apache]"
 ```
