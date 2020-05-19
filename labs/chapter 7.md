@@ -21,7 +21,7 @@ Template for workstation::setup
 
 ```
 - Add cookbook_file to create "/etc/motd2"
-- Add remot_file to create "/etc/motd3"
+- Add remote_file to create "/etc/motd3"
 - Apply runlist and check output
 ```
 
