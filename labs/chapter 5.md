@@ -14,6 +14,30 @@ sudo systemctl start docker
 docker --version
 ```
 
+### Common Commands
+```
+# list kitchen
+kitchen list
+
+# create kitchen
+kitchen create
+
+# converge kitchen
+kitchen converge
+
+# test the assumptions
+kitchen verify
+
+# destroy all kitchens
+kitchen destroy
+
+# check all docker images
+docker images
+
+# check all running containers
+docker ps
+```
+
 ## Part 1
 
 Testing apache cookbook for one platform "ubuntu-18.04"
