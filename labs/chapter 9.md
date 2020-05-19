@@ -30,6 +30,7 @@ In AWS
 - unzip <starter kit path> -> this gives /chef-repo/
 
 
+In whatever machine you are using workstation for
 - Delete chef-repo/cookbooks/starter
 - Clone "https://github.com/shekhar2010us/chef-essentials-repo-15"
 - Copy all cookbooks from this git repository to chef-repo/cookbooks/
