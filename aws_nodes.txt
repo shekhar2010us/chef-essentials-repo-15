@@ -1,3 +1,7 @@
+username for all nodes - centos
+password for all nodes - aws.pem or aws.ppk
+
+
 Daniel
 18.216.5.160
  
