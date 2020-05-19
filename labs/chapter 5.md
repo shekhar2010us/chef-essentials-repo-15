@@ -132,6 +132,7 @@ Testing apache cookbook for two platforms; "ubuntu-18.04" and "centos-6"
 Testing apache cookbook for two platforms; "ubuntu-18.04" and "centos-6". Also include workstation dependency
 
 ```
+- remove Policyfile.lock.json from apache cookbook
 - modify kitchen.yml file in apache cookbook
 - In apache default recipe:
 	> include_recipe 'workstation::setup'
