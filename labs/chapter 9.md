@@ -50,9 +50,11 @@ In whatever machine you are using workstation for
 chef-server labs for reference
 
 ```
-# clone this in /home/centos - for reference.
-# contains all labs to be done on day 2/3
+Clone a reference project somewhere in your machine. This project contains all labs to be done on day 2/3
 git clone https://github.com/shekhar2010us/chef-server-example.git
+   - say desktop in case you are using laptop as workstation
+   - /home/centos in case you are using aws as workstation
+
 ```
 
 
