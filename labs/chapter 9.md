@@ -2,7 +2,6 @@
 
 > Total Time: 45 minutes
 
-`working directory - /home/centos/code`
 
 ## Part 1
 
