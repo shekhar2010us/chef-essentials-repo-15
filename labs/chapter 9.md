@@ -21,7 +21,7 @@ Getting ready for chef server labs
 - Unzip starter kit -> this gives /chef-repo/
 
 ** In case, you are using AWS VM as your workstation,
-In you laptop
+In your laptop
 - Download starter kit
 - scp –i <aws.pem path> <aws.pem path> centos@<IP>:/home/centos/
 - scp –i <aws.pem path> <zipped starter kit path> centos@<IP>:/home/centos/
@@ -32,7 +32,9 @@ In AWS
 
 In whatever machine you are using workstation for
 - Delete chef-repo/cookbooks/starter
-- Clone "https://github.com/shekhar2010us/chef-essentials-repo-15"
+- Clone "https://github.com/shekhar2010us/chef-essentials-repo-15" in some other directory
+	- say desktop in case you are using laptop as workstation
+	- /home/centos in case you are using aws as workstation
 - Copy all cookbooks from this git repository to chef-repo/cookbooks/
 3 cookbooks
 	- apache
