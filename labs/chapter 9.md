@@ -21,9 +21,11 @@ Getting ready for chef server labs
 - Unzip starter kit -> this gives /chef-repo/
 
 ** In case, you are using AWS VM as your workstation,
-- Download starter kit in your laptop
+In you laptop
+- Download starter kit
 - scp –i <aws.pem path> <aws.pem path> centos@<IP>:/home/centos/
 - scp –i <aws.pem path> <zipped starter kit path> centos@<IP>:/home/centos/
+In AWS
 - sudo yum install –y unzip
 - unzip <starter kit path> -> this gives /chef-repo/
 
