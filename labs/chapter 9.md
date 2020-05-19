@@ -3,6 +3,16 @@
 > Total Time: 45 minutes
 
 
+## Pre-requisite
+
+Prepare directories - in case you are using aws as workstation
+
+```
+cd ~
+sudo rm -rf *
+```
+
+
 ## Part 1
 
 Sign-up for manage.chef.io
