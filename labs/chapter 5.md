@@ -38,6 +38,63 @@ docker images
 docker ps
 ```
 
+# multiple platforms recipe file sample
+
+```
+case node[:platform]
+when "ubuntu", "debian"
+  package "apache2" do
+    action :install
+  end
+when "centos", "redhat", "amazon"
+  package "httpd" do
+    action :install
+  end
+end
+
+case node[:platform]
+when "ubuntu", "debian"
+  service "apache2" do
+    action [:start, :enable]
+  end
+when "centos", "redhat", "amazon"
+  service "httpd" do
+    action [:start, :enable]
+  end
+end
+
+file '/var/www/html/index.html' do
+  content " Hello World !! "
+end
+```
+
+# kitchen yaml sample
+
+```
+---
+driver:
+  name: docker
+  use_sudo: false
+
+provisioner:
+  name: chef_zero
+  product_name: chef
+  product_version: 15
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-18.04
+
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
+```
+
 ## Part 1
 
 Testing apache cookbook for one platform "ubuntu-18.04"
