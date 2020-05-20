@@ -35,6 +35,7 @@ knife ssh <IP> -m -x centos -i <PEM_FILE_PATH> "sudo chef-client"
 ```
 
 <br>
+
 **Policyfile for company_web:**
 
 ```
@@ -82,6 +83,7 @@ end
 
 
 <br>
+
 ## Part 1 - company_web
 
 ```
