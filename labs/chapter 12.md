@@ -5,6 +5,7 @@
 `working directory - /home/centos/chef-repo`
 
 <br>
+
 **Important commands**
 
 ```
