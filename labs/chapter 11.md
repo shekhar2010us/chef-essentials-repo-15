@@ -1,3 +1,4 @@
+
 # Lab: Chapter 11
 
 > Total Time: 45 minutes
@@ -5,6 +6,7 @@
 `working directory - /home/centos/chef-repo`
 
 <br>
+
 **Important commands**
 
 ```
@@ -34,6 +36,7 @@ knife ssh <IP> -m -x centos -i <PEM_FILE_PATH> "sudo chef-client"
 ```
 
 <br>
+
 **Policyfile sample (for workstation):**
 
 ```
@@ -44,6 +47,7 @@ cookbook 'workstation', path: 'cookbooks/workstation'
 ```
 
 <br>
+
 ## Part 1 - Workstation policyfile
 
 ```
@@ -56,6 +60,7 @@ cookbook 'workstation', path: 'cookbooks/workstation'
 
 
 <br>
+
 ## Part 2 - Apache policyfile
 
 ```
