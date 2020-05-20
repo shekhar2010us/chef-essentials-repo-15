@@ -96,6 +96,10 @@ end
 	depends 'myiis'
 - Create a template in company_web, name: "homepage"
 	chef generate template cookbooks/company_web homepage
+- Get the content of this template from above
+
+- Change the default.rb (get the content of default.rb from above)
+
 - create policyfile for company_web
 	chef generate policyfile company_web
 - change company_web policyfile content
