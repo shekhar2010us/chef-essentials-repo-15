@@ -49,6 +49,7 @@ cookbook 'workstation', path: 'cookbooks/workstation'
 ```
 - create policyfile for workstation
 - change workstation policyfile content
+- create lock file
 - push to server with "prod" group
 - check policy in server
 ```
@@ -60,6 +61,7 @@ cookbook 'workstation', path: 'cookbooks/workstation'
 ```
 - create policyfile for apache
 - change apache policyfile content
+- create lock file
 - push to server with "prod" group
 - check policy in server
 - bootstrap FIRST node, name it "node1"
