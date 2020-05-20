@@ -52,7 +52,7 @@ cookbook 'myiis', path: 'cookbooks/myiis'
 ```
 case node['platform']
 when 'windows'
-  include_recipe 'myiis::default'
+  include_recipe 'myiis::default'
   edit_resource(:template, 'c:\inetpub\wwwroot\Default.htm') do
     source 'homepage.erb'
     cookbook 'company_web'
