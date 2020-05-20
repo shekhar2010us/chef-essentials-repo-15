@@ -31,6 +31,9 @@ knife bootstrap <IP> -x centos --sudo -i <PEM_FILE_PATH> -N <NODE_NAME>
 # show node details
 knife node show <NODE_NAME>
 
+# set a policy to a node
+knife node policy set <NODE_NAME> <POLICY_GROUP> <POLICY_NAME>
+
 # ssh to apply recipe
 knife ssh <IP> -m -x centos -i <PEM_FILE_PATH> "sudo chef-client"
 ```
