@@ -66,6 +66,7 @@ end
 ```
 
 **homepage.erb for company_web**
+
 ```
 <html>
   <body>
