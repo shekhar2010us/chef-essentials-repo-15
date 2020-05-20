@@ -1,7 +1,7 @@
 
 # Lab: Chapter 11
 
-> Total Time: 45 minutes
+> Total Time: 30 minutes
 
 `working directory - /home/centos/chef-repo`
 
